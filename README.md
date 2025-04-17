@@ -37,13 +37,6 @@ Display how many commits ahead and/or behind you are of your upstream—prompt r
 ~/p/<b>hydro</b> main ❱ ⎢
 </pre>
 
-Display [`$CMD_DURATION`](https://fishshell.com/docs/current/language.html?highlight=cmd_duration#envvar-CMD_DURATION) when > `1` second. [Configurable](#configuration).
-
-<pre>
-~/p/<b>hydro</b> main ❱ git push --quiet
-~/p/<b>hydro</b> main 1.1s ❱ ⎢
-</pre>
-
 Display the last non-zero [exit status](https://fishshell.com/docs/current/tutorial.html#exit-status) (or statuses) using [`$pipestatus`](https://fishshell.com/docs/current/language.html?highlight=cmd_duration#envvar-pipestatus).
 
 <pre>
@@ -100,14 +93,13 @@ Modify variables using `set --universal` from the command line or `set --global`
 
 > Any argument accepted by [`set_color`](https://fishshell.com/docs/current/cmds/set_color.html).
 
-| Variable               | Type  | Description                    | Default              |
-| ---------------------- | ----- | ------------------------------ | -------------------- |
-| `hydro_color_pwd`      | color | Color of the pwd segment.      | `$fish_color_normal` |
-| `hydro_color_git`      | color | Color of the git segment.      | `$fish_color_normal` |
-| `hydro_color_start`    | color | Color of the start symbol.     | `$fish_color_normal` |
-| `hydro_color_error`    | color | Color of the error segment.    | `$fish_color_error`  |
-| `hydro_color_prompt`   | color | Color of the prompt symbol.    | `$fish_color_normal` |
-| `hydro_color_duration` | color | Color of the duration section. | `$fish_color_normal` |
+| Variable             | Type  | Description                 | Default              |
+| -------------------- | ----- | --------------------------- | -------------------- |
+| `hydro_color_pwd`    | color | Color of the pwd segment.   | `$fish_color_normal` |
+| `hydro_color_git`    | color | Color of the git segment.   | `$fish_color_normal` |
+| `hydro_color_start`  | color | Color of the start symbol.  | `$fish_color_normal` |
+| `hydro_color_error`  | color | Color of the error segment. | `$fish_color_error`  |
+| `hydro_color_prompt` | color | Color of the prompt symbol. | `$fish_color_normal` |
 
 ### Flags
 
@@ -118,11 +110,10 @@ Modify variables using `set --universal` from the command line or `set --global`
 
 ### Misc
 
-| Variable                       | Type    | Description                                                                                                              | Default |
-| ------------------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------ | ------- |
-| `fish_prompt_pwd_dir_length`   | numeric | The number of characters to display when path shortening. Set it to `0` to display only the topmost (current) directory. | `1`     |
-| `hydro_ignored_git_paths`      | strings | Space separated list of paths where no git info should be displayed.                                                     | `""`    |
-| `hydro_cmd_duration_threshold` | numeric | Minimum command duration, in milliseconds, after which command duration is displayed.                                    | `1000`  |
+| Variable                     | Type    | Description                                                                                                              | Default |
+| ---------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------ | ------- |
+| `fish_prompt_pwd_dir_length` | numeric | The number of characters to display when path shortening. Set it to `0` to display only the topmost (current) directory. | `1`     |
+| `hydro_ignored_git_paths`    | strings | Space separated list of paths where no git info should be displayed.                                                     | `""`    |
 
 ## License
 
